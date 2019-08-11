@@ -1,0 +1,13 @@
+* {
+    background: rgba(0, 0, 0, .1);
+}
+
+body {
+    /* background: #000; */
+}
+
+.container {
+    /* max-width :可以自适应,随浏览器而动*/
+    max-width: 700px;
+    margin: 0 auto;
+}
