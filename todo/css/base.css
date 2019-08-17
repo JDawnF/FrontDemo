@@ -1,13 +1,156 @@
-* {
-    background: rgba(0, 0, 0, .1);
-}
-
 body {
-    /* background: #000; */
-}
-
-.container {
-    /* max-width :可以自适应,随浏览器而动*/
-    max-width: 700px;
+    background: #00484b;
+    color: #fff;
+  }
+  
+  .container {
+    max-width: 800px;
     margin: 0 auto;
-}
+    position: relative;
+  }
+  
+  * {
+    box-sizing: border-box;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    outline: 0;
+  }
+  
+  h1 {
+    text-align: center;
+  }
+  
+  .task-list {
+    margin: 10px 0;
+  }
+  
+  .remind button {
+    display: none;
+  }
+  
+  .task-detail-mask,
+  .task-detail {
+    display: none;
+  }
+  
+  input,
+  .task-item,
+  button,
+  .task-detail-mask,
+  textarea {
+    padding: 10px;
+    border-radius: 3px;
+  }
+  
+  textarea {
+    width: 100%;
+    min-height: 100px;
+  }
+  
+  /* 指定类型为text和date时才生效 */
+  input[type="text"],
+  input[type="date"] {
+    display: block;
+    width: 100%;
+    border: 0;
+    background: #ddd;
+  }
+  
+  /* 指定类型为text和date时才生效 */
+  input[type="text"]:hover,
+  input[type="date"]:hover,
+  input[type="text"]:focus,
+  input[type="date"]:focus {
+    background: #fff;
+  }
+  
+  button,
+  submit {
+    display: inline-block;
+    border: 0;
+    cursor: pointer;
+    color: #fff;
+  }
+  
+  .add-task input[type="text"] {
+    float: left;
+    width: 83%;
+    margin-right: 2%;
+  }
+  
+  .add-task [type="submit"] {
+    width: 15%;
+    background: #40d91c;
+  }
+  
+  .task-item,
+  .add-task [type="submit"] {
+    -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.4);
+  }
+  
+  .add-task [type="submit"]:hover {
+    background: #57ff2f;
+  }
+  
+  .task-item {
+    background: #fff;
+    color: #333;
+    margin-bottom: 2px;
+    cursor: pointer;
+  }
+  
+  .task-item:hover {
+    background: #ddd;
+  }
+  
+  .task-detail {
+    position: absolute;
+    color: #333;
+    bottom: 0;
+    right: 0;
+    padding: 10px;
+    background: #fff;
+    width: 50%;
+    height: 100%;
+  }
+  
+  .task-detail .content {
+    padding: 10px;
+    font-weight: 900;
+    cursor: pointer;
+  }
+  
+  .task-detail>* {
+    margin-bottom: 10px;
+  }
+  
+  .task-detail-mask,
+  .task-detail {
+    position: absolute;
+  }
+  
+  .task-detail-mask {
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background: rgba(30, 30, 30, 0.2);
+  }
+  
+  .action {
+    color: #888;
+    font-size: 90%;
+  }
+  
+  .action:hover {
+    color: #333
+  }
+  
+  .fr {
+    float: right;
+  }
+  
+  .task-content {
+    margin-left: 10px;
+  }

@@ -4,43 +4,45 @@
 <head>
     <meta charset="UTF-8">
     <title>My Todo App</title>
+    <!-- 重置样式，要注意覆盖base.css -->
+    <link rel="stylesheet" href="node_modules/normalize.css/normalize.css">
     <link rel="stylesheet" href="css/base.css">
 </head>
 
 <body>
-    <div class="container">     <!--总容器开始-->
-        <div class="add-task">
-            <input type="text">
-            <button>submit</button>
+    <div class="container">
+        <!--总容器开始-->
+        <h1>My ToDo</h1>
+        <form class="add-task">
+            <input type="text" name="content" autofocus autocomplete="off" placeholder="e.g. 下午记得买菜" />
+            <button type="submit">submit</button>
+        </form>
+        <!-- 清单列表开始 -->
+      <div class="task-list"></div>
+      <!-- 清单列表结束 -->
+      <div class="task-detail-mask"></div>
+      <!-- 任务详情开始 -->
+      <div class="task-detail">
+        <!-- 任务标题开始 -->
+        <div class="content">下午记得买菜</div>
+        <div>
+          <!-- 任务描述开始 -->
+          <div class="desc">
+            <textarea></textarea>
+          </div>
         </div>
-        <div class="task-list"> <!--清单列表开始-->
-            <div class="task-item">     <!--任务开始-->
-                <span><input type="checkbox"></span>
-                <span class="task-content">item content 1</span>
-                <span class="task-content">item content 1</span>
-                <span class="task-content">item content 1</span>
-                <span class="task-content">item content 1</span>
-                <span>delete</span>
-                <span>detail</span>
-            </div><!--任务结束-->
-        </div>  <!--清单列表结束-->
-        <div class="task-detail">   <!--任务详情开始-->
-            <div class="content"> <!--任务标题开始-->
-
-            </div>    
-            <div>
-                <div class="desc">       <!--任务描述开始-->
-
-                </div>
-            </div>
-            <div class="remind">         <!--任务定时提醒开始-->
-                <!-- 在带的日历小工具 -->
-                <input type="date">     
-                <button type="submit">submit</button>
-            </div>
-        </div>  <!--任务详情结束-->
-    </div>      <!--总容器结束-->
+        <div class="remind">
+          <!-- 任务定时开始提醒 -->
+          <input type="date" />
+          <button type="submit">submit</button>
+          <!-- 任务定时结束提醒 -->
+        </div>
+      </div>
+      <!-- 任务详情结束 -->
+    </div>
+    <!--总容器结束-->
     <script src="node_modules/jquery/dist/jquery.js"></script>
+    <!-- <script src="./node_modules/store/dist/store.everything.min.js"></script> -->
     <script src="js/base.js"></script>
 </body>
 
